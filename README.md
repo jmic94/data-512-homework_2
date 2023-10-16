@@ -38,6 +38,13 @@ Use Wikimedia's ORES machine learning model to make predictions of Wikipedia art
 
 # Output files
 - [wp_scored_city_articles_by_state.csv](https://github.com/jmic94/data-512-homework_2/blob/main/output/wp_scored_city_articles_by_state.csv) contains the predicted article quality for each city along with state, regional division, revision id and population information.
+- Fields:
+  - state (character): state of the article.
+  - regional_division (character): regional division of the article.
+  - population (integer): 2022 population of the state.
+  - article_title (character): title of the article.
+  - revision_id (integer): last revision ID of the article obtained from MediaWii Action API.
+  - article_quality (character): predicted article quality obtained from the ORES API.
 
 # Research Implications
 I found the ORES API to be unreliable when making predictions on over 20,000 articles. The API would time out or just simply be stuck on a article indefinitely after every 1,200 articles or so. As a result, when looping over the articles to get the predictions of article quality, I had to restart the loop whereever the API timed out or got stuck. This took more than 8 hours. Extracting the revision IDs of the articles took about 2 hours and I did not find any time-out issues with the MediaWiki Action API as I did with the ORES API.
