@@ -17,7 +17,7 @@ Use Wikimedia's ORES machine learning model to make predictions of Wikipedia art
 # ORES Access Token
 - Create a personal access token to use the API here: https://api.wikimedia.org/wiki/Authentication#Personal_API_tokens.
 - Store this token in a .env file stored in your local clone of the repository.
-- Format it as: 'access_token' = '[INSERT ACCESST TOKEN HERE]'
+- Format it as: 'access_token' = '[INSERT ACCESS TOKEN HERE]'
 - The main notebook will load the .env file to extract the access token.
 - The .env file is ignored by the repository and should not be pushed to any remote Git repository.
 
